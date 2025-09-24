@@ -1,2 +1,3 @@
-# See .gitignore for excluded files
-# raffle-dapp
+# Raffle dApp
+A Solana raffle dApp built with Anchor & Switchboard for randomness.
+
