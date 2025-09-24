@@ -1,0 +1,33 @@
+[toolchain]
+package_manager = "yarn"
+
+[features]
+resolution = true
+skip-lint = false
+
+[programs.devnet]
+token_raffle = "8xQ1B6beBjoP9oFRHzjmPyHzdGAJPnxcUYzL6Dr5Vsax"
+
+[programs.localnet]
+token_raffle = "8xQ1B6beBjoP9oFRHzjmPyHzdGAJPnxcUYzL6Dr5Vsax"
+
+[registry]
+url = "https://api.apr.dev"
+
+[provider]
+cluster = "devnet"
+wallet = "~/.config/solana/id.json"
+
+[scripts]
+test = "npx ts-mocha -p tsconfig.json tests/**/*.ts"
+
+[test]
+startup_wait = 60000
+shutdown_wait = 2000
+upgradeable = false
+
+[test.validator]
+bind_address = "0.0.0.0"
+url = "http://127.0.0.1:9944"
+ledger = ".anchor/test-ledger"
+rpc_port = 8899

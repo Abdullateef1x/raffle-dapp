@@ -1,0 +1,85 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Diagnostic reports
+report.[0-9]*.[0-9]*.[0-9]*.[0-9]*.json
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Directory for instrumented libs
+lib-cov
+
+# Coverage
+coverage
+*.lcov
+.nyc_output
+
+# Build / cache
+.grunt
+bower_components
+.lock-wscript
+build/Release
+node_modules/
+jspm_packages/
+web_modules/
+*.tsbuildinfo
+.npm
+.eslintcache
+.stylelintcache
+.node_repl_history
+*.tgz
+.yarn-integrity
+
+# Env files
+.env
+.env.*
+!.env.example
+
+# Parcel / Next.js / Nuxt / Gatsby / Vite / etc.
+.cache
+.parcel-cache
+.next
+out
+.nuxt
+dist
+.output
+.vuepress/dist
+.temp
+.svelte-kit/
+.vite/
+.docusaurus
+.serverless/
+.fusebox/
+.dynamodb/
+.firebase/
+
+# Editor & tooling
+.vscode/
+.vscode-test
+
+# Yarn v3
+.pnp.*
+.yarn/*
+
+# Solana / Anchor sensitive keys
+anchor/*.json
+setup/*.json
+dev-wallet.json
+target/
+test-ledger/
+metadata.so
+
+# Default ignore ALL json (except safe ones)
+*.json
+!package.json
+!tsconfig.json
+*.json
