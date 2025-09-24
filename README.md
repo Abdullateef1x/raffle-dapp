@@ -1,7 +1,7 @@
 # 🎟️ Raffle DApp — Solana + Anchor + Next.js
 
 A decentralized raffle application built on **Solana** using **Anchor framework** for smart contracts and **Next.js** for the frontend.  
-It integrates with **Switchboard** for randomness generation (⚠️ still being debugged).
+It integrates with **Switchboard** for randomness generation (⚠️ currently not fully working; using mock/pseudo-randomness instead).
 
 ## 🚀 Tech Stack
 
@@ -16,7 +16,7 @@ It integrates with **Switchboard** for randomness generation (⚠️ still being
 
 - Create and manage raffles on Solana
 - Buy raffle tickets
-- Generate secure randomness with Switchboard (**currently not fully working**)
+- Generate secure randomness with Switchboard (**currently fallback to mock/pseudo-randomness**)
 - Choose winners and claim prizes
 - Wallet connection and on-chain transactions
 
@@ -32,31 +32,30 @@ It integrates with **Switchboard** for randomness generation (⚠️ still being
 ```bash
 git clone git@github.com:Abdullateef1x/raffle-dapp.git
 cd raffle-dapp
-
-
-### Install dependencies
-```bash
+Install dependencies
+bash
+Copy code
 npm install
-
-
 Build and deploy Solana program
+bash
+Copy code
 anchor build
 anchor deploy
-
 Run frontend locally
+bash
+Copy code
 npm run dev
-
 📂 Project Structure
-```bash
+
+bash
+Copy code
 raffle-dapp/
 ├── app/              # Next.js App Router frontend
 ├── anchor/           # Anchor smart contract program
 ├── setup/            # Local setup and Switchboard configs
 ├── public/           # Static assets
 └── README.md
-
-
-⚠️ Known Issue: Switchboard randomness commit is not stable (currently debugging timeouts on devnet).
+⚠️ Known Issue: Switchboard randomness commit is not stable (currently debugging timeouts on devnet). Currently, the app uses mock/pseudo-randomness for testing.
 
 RPC timeouts sometimes occur when testing locally.
 
@@ -64,8 +63,11 @@ RPC timeouts sometimes occur when testing locally.
 
 Sensitive JSON keypairs are not tracked — they are ignored in .gitignore.
 
-Generate your own keypairs locally (solana-keygen new -o anchor/your-keypair.json).
+Generate your own keypairs locally:
 
+bash
+Copy code
+solana-keygen new -o anchor/your-keypair.json
 🔒 Security Note
 
 Never commit private keys or .json keypairs. They have been removed and are now in .gitignore.
@@ -73,3 +75,6 @@ Never commit private keys or .json keypairs. They have been removed and are now 
 📜 License
 
 MIT
+
+csharp
+Copy code
